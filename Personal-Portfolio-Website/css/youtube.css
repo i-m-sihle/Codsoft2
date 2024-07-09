@@ -1,0 +1,116 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+header {
+    /* height: 80px; */
+    width: 100%;
+    background-color: rgba(180, 132, 108, 0.8);
+    
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem 2rem;
+}
+
+
+nav .logo {
+    font-size: 3rem;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Comforter', cursive;
+}
+
+nav .navMenu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+}
+
+nav .navMenu .navItems .navLinks{
+    color: #fff;
+    text-decoration: none;
+    transition: 300ms ease-in-out;
+}
+
+nav .navMenu .navItems .navLinks:hover {
+    color: #884A39;
+    font-weight: 600;
+}
+
+
+nav .navMenu .navItems .navLinks.active {
+    color: #884A39;
+}
+
+
+main {
+    background-color: rgba(227, 208, 185, 0.7);
+    padding: 2rem;
+}
+
+.youtube-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 40px;
+}
+
+.youtube-container img {
+    max-width: 100%;
+    border-radius: 8px;
+    transition: transform 0.3s ease-in-out;
+}
+
+.youtube-container img:hover {
+    transform: scale(1.05);
+}
+
+.youtube-container a {
+    color: #000;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.youtube-container a:hover {
+    color: #6E260E;
+}
+
+.youtube-container .video-title {
+    font-weight: bold;
+    font-size: 1.2rem; /* Adjust font size as needed */
+}
+
+footer {
+    padding: 20px;
+    background-color: rgba(180, 132, 108, 0.8);
+    display: flex;
+    justify-content: center;
+}
+
+
+footer .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px; /* Adjust the gap between the icons */
+} */
+
+footer .container a {
+    display: inline-block; /* Ensure each link is on its own line */
+}
+
+footer .container a img {
+    width: 40px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s ease-in-out;
+}
+
+footer .container a:hover img {
+    transform: scale(1.1); /* Add a hover effect */
+}

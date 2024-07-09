@@ -1,0 +1,235 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+}
+
+body {
+    overflow-y: auto; /* Allow vertical scrolling */
+    min-height: 100%;
+    background-color: rgba(227, 208, 185, 0.7); /* Background color of the entire body */
+}
+
+header {
+    width: 100%;
+    background-color: rgba(180, 132, 108, 0.8);
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: .5rem 2rem;
+}
+
+nav .logo {
+    font-size: 3rem;
+    color: #fff;
+    text-decoration: none;
+    font-family: 'Comforter', cursive;
+}
+
+nav .navMenu {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    list-style: none;
+}
+
+nav .navMenu .navItems .navLinks {
+    color: #fff;
+    text-decoration: none;
+    transition: 300ms ease-in-out;
+}
+
+nav .navMenu .navItems .navLinks:hover {
+    color: #884A39;
+    font-weight: 600;
+}
+
+nav .navMenu .navItems .navLinks.active {
+    color: #884A39;
+}
+
+main {
+    background-color: rgba(227, 208, 185, 0.7); /* Background color of the main content */
+    min-height: calc(100vh - 60px); /* Adjust the height to leave space for the footer */
+}
+
+main .content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .5rem;
+    padding: 2rem;
+}
+
+main .content__img {
+    width: 80%;
+}
+
+main .content__img1 img {
+    max-width: 50%;
+    border: 3px solid #884A39;
+    border-radius: 10px;
+    margin-top: 15rem;
+}
+
+main .content__img2 img {
+    max-width: 50%;
+    border: 3px solid #884A39;
+    border-radius: 10px;
+    margin-bottom: 15rem;
+}
+
+form {
+    background: rgba(185, 143, 123, 0.8); /* Set the background color of the form */
+    display: flex;
+    flex-direction: column;
+    padding: 1vw 2vw; /* Reduce padding */
+    width: 80%; /* Adjust width */
+    max-width: 500px; /* Adjust max-width */
+    border-radius: 10px;
+    align-items: center;
+    margin: 20px auto 40px auto; /* Center the form horizontally and add margin at the top and bottom */
+    overflow-y: auto; /* Enable vertical scrollbar when form content exceeds viewport height */
+}
+
+form h3 {
+    color: #555;
+    font-weight: 800;
+    margin-bottom: 20px;
+}
+
+form input,
+form textarea {
+    border: 0;
+    margin: 10px 0;
+    padding: 15px; /* Reduce input padding */
+    outline: none;
+    background: #f5f5f5;
+    font-size: 16px;
+}
+
+form button {
+    padding: 12px; /* Reduce button padding */
+    background: #ff5361;
+    color: #fff;
+    font-size: 18px;
+    border: 0;
+    outline: none;
+    cursor: pointer;
+    width: 150px;
+    margin: 20px auto 0;
+    border-radius: 30px;
+}
+
+.part1 h2 {
+    color: black;
+    font-size: 30px;
+    font-family: 'Indie Flower', cursive;
+    margin-top: 5rem;
+}
+
+.part2 h2 {
+    color: black;
+    font-size: 30px;
+    font-family: 'Indie Flower', cursive;
+    margin-top: -5rem;
+}
+
+p {
+    font-size: 20px;
+    font-family: 'Shadows Into Light', cursive;
+    margin-right: 30px;
+}
+
+.part1 {
+    display: flex;
+    flex-direction: column-reverse;
+}
+
+footer {
+    position: fixed; /* Fixed position to keep it at the bottom */
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    padding: 10px; /* Reduce footer padding */
+    background-color: rgba(180, 132, 108, 0.8);
+    display: flex;
+    justify-content: center;
+    z-index: 1; /* Ensure footer is above the form */
+}
+
+footer .container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 70px; /* Adjust the gap between the icons */
+}
+
+footer .container a {
+    display: inline-block; /* Ensure each link is on its own line */
+}
+
+footer .container a img {
+    width: 40px; /* Adjust size as needed */
+    height: auto; /* Maintain aspect ratio */
+    transition: transform 0.3s ease-in-out;
+}
+
+footer .container a:hover img {
+    transform: scale(1.1); /* Add a hover effect */
+}
+
+@media screen and (max-width: 767px) {
+    nav .logo {
+        font-size: 2.5rem;
+    }
+
+    nav .navMenu .navItems .navLinks {
+        font-size: 1rem;
+    }
+
+    main .content {
+        padding: 1.5rem;
+        gap: 2.5rem;
+    }
+
+    main .content__img {
+        width: 50%;
+    }
+
+    main .content__img2 img {
+        max-width: 100%;
+    }
+
+    main .content .content__text .icons > a {
+        width: 10%;
+    }
+
+    main .content .content__text .icons a > img,
+    main .content .icons a img {
+        width: 100%;
+    }
+
+    .name h1 {
+        font-size: 1.5rem;
+    }
+
+    .name span {
+        font-size: clamp(1.5rem, 8vw + .5rem, 3rem);
+    }
+
+    .ptag {
+        font-size: 1.2rem;
+    }
+
+    footer .container a img {
+        width: 30px;
+    }
+}
